@@ -19,7 +19,6 @@ public class Servico {
 
     //Método para cadastrar pessoas
     public ResponseEntity<?> cadastrar(Pessoa obj){
-
         if(obj.getNome().equals("")){
             mensagem.setMensagem("O nome precisa ser preenchido");
             return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);

@@ -36,7 +36,7 @@ public class Controle {
         return servico.selecionarPeloCodigo(codigo);
     }
 
-    @PutMapping("/api")
+    @PutMapping("/api/editar")
     public ResponseEntity<?> editar(@RequestBody Pessoa obj){
         return servico.editar(obj);
     }
