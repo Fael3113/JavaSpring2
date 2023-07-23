@@ -96,11 +96,6 @@ public class Controle {
         return "Ola Mundo!";
     }
     
-    @GetMapping("/boasVindas/")
-    public String boasVindas(){
-        return "Seja bem vindo(a) ";
-    }
-    
     @GetMapping("/boasVindas/{nome}")
     public String boasVindas(@PathVariable String nome){
         return "Seja bem vindo(a) " + nome;
@@ -109,11 +104,6 @@ public class Controle {
     @PostMapping("/pessoa")
     public Pessoa pessoa(@RequestBody Pessoa p){
         return p;
-    }
-
-    @GetMapping("/status")
-    public ResponseEntity<?> status() {
-        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PostMapping("/cliente")
